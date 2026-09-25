@@ -141,15 +141,15 @@ export default function Home() {
       />
 
       {/* Main Container */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" tabIndex={-1} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 outline-none">
         {/* Privacy Shield Panel */}
-        <div className="mb-6">
+        <section aria-label="Privacy Shield and PII Masking Status" className="mb-6">
           <PrivacyShield
             piiResult={piiResult}
             isEnabled={isPiiShieldEnabled}
             onToggle={setIsPiiShieldEnabled}
           />
-        </div>
+        </section>
 
         {/* Global Error Alert Banner */}
         {error && (

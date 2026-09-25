@@ -10,7 +10,7 @@ interface PrivacyShieldProps {
   onToggle: (enabled: boolean) => void;
 }
 
-export const PrivacyShield: React.FC<PrivacyShieldProps> = ({
+export const PrivacyShield: React.FC<PrivacyShieldProps> = React.memo(({
   piiResult,
   isEnabled,
   onToggle,
@@ -95,4 +95,6 @@ export const PrivacyShield: React.FC<PrivacyShieldProps> = ({
       </div>
     </div>
   );
-};
+});
+
+PrivacyShield.displayName = "PrivacyShield";
